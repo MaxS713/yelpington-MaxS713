@@ -9,59 +9,72 @@
       "we": -73.2019
     },
     "phoneNumber": "+1 (802) 448-3032",
-    "hours": "12–8PM",
+    "hours": "12PM–8PM",
     "about": "Down-to-earth restaurant serving eclectic and delicious Somali dishes & drinks."
   },
   {
-    "id": "1",
-    "name": "Restaurant Name",
+    "id": "2",
+    "name": "Pho Hong",
     "cuisine": "Cuisine",
-    "address": "Address",
+    "address": "325 N Winooski Ave, Burlington, VT 05401",
     "coordinates": {
-      "ns": 44.4790,
-      "we": -73.2019
+      "ns": 44.4890,
+      "we": -73.2076
     },
-    "phoneNumber": "+ 802 555 5555",
-    "hours": "Hours",
-    "about": "description"
+    "phoneNumber": "+ 1 (802) 865-8031",
+    "hours": "11AM-9PM",
+    "about": "Popular spot for Vietnamese noodle soups."
   },
   {
-    "id": "1",
-    "name": "Restaurant Name",
+    "id": "3",
+    "name": "Café Mamajuana",
     "cuisine": "Cuisine",
-    "address": "Address",
+    "address": "88 Oak St, Burlington, VT 05401",
     "coordinates": {
-      "ns": 44.4785,
-      "we": -73.2019
+      "ns": 44.4898,
+      "we": -73.2100
     },
-    "phoneNumber": "+ 802 555 5555",
-    "hours": "Hours",
-    "about": "description"
+    "phoneNumber": "+1 (802) 316 8128",
+    "hours": "4PM–9PM",
+    "about": "Dominican restaurant with plenty of original and tasty options."
   },
   {
-    "id": "1",
-    "name": "Restaurant Name",
-    "cuisine": "Cuisine",
-    "address": "Address",
+    "id": "4",
+    "name": "The Skinny Pancake",
+    "cuisine": "Crepes",
+    "address": "60 Lake St, Burlington, VT 05401",
     "coordinates": {
-      "ns": 44.4780,
-      "we": -73.2019
+      "ns": 44.4773,
+      "we": -73.2195
     },
-    "phoneNumber": "+ 802 555 5555",
-    "hours": "Hours",
-    "about": "description"
+    "phoneNumber": "+ 1 (802) 540-0188",
+    "hours": "8AM–3PM",
+    "about": "Local chain featuring crepes."
   },
   {
-    "id": "1",
-    "name": "Restaurant Name",
-    "cuisine": "Cuisine",
-    "address": "Address",
+    "id": "5",
+    "name": "Vivid Coffee Roasters",
+    "cuisine": "Coffee",
+    "address": "150 Cherry St, Burlington, VT 05401",
     "coordinates": {
-      "ns": 44.4778,
-      "we": -73.2019
+      "ns": 44.4794, 
+      "we": -73.2121
     },
-    "phoneNumber": "+ 802 555 5555",
-    "hours": "Hours",
-    "about": "description"
+    "phoneNumber": "+ 1 (802) 383-1088",
+    "hours": "7AM–4PM",
+    "about": "Get your coffee here. Quality and meticulous roasts imported from small farms."
+  },
+  {
+  "id": "6",
+  "name": "Bistro de Margot",
+  "cuisine": "French",
+  "address": "126 College St, Burlington, VT 05401",
+  "coordinates": {
+    "ns": 44.4772,
+    "we": -73.2148
+  },
+  "phoneNumber": "+1 (802) 863-5200",
+  "hours": "5PM–8PM",
+  "about": "Stylish restaurant offering modern takes on classic French cuisine. Reservation required."
   }
 ]

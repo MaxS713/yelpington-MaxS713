@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Style for the general layout of the pages */
+
+@import url("https://fonts.googleapis.com/css2?family=Inspiration");
+
+*{
+  border: 1px solid red;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  height: 100vh;
 }
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(213, 230, 213,0.1);
+  font-family: 'Inspiration', cursive;
+  color: #EDAC92;
+}
+
+main {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10vw;
+  line-height: 1.5;
+  padding: 4em 1em;
+}
+

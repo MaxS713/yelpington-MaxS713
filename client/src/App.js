@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
-import './App.css';
-import Map from "./components/Map.js"
+import "./App.css";
+import Map from "./components/Map.js";
+
+import restaurantLogo from "./images/restaurant-logo.png";
 
 function App() {
-
   const [restaurantData, setRestaurantData] = useState([]);
 
   async function getData() {
@@ -15,10 +16,29 @@ function App() {
     getData();
   }, []);
 
+
   return (
     <main>
-    <h1>Places You Can Eat!</h1>
-    <Map restaurantData ={restaurantData}/>
+      <div id="title-and-map">
+        <div id="title-and-logo">
+          <img
+            src={restaurantLogo}
+            alt="restaurant logo, a plate with fork and spoon on each side"
+            height="100px"
+          />
+          <h1>Places You Can Eat!</h1>
+        </div>
+        <Map restaurantData={restaurantData} />
+      </div>
+      <ol id="navbar">
+        {restaurantData.map((restaurant) => {
+          return (
+            <li key={restaurant.id}>
+            <a href="">{restaurant.name}</a>
+            </li>
+          );
+        })}
+      </ol>
     </main>
   );
 }
