@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import ModalComponent from './Modal.js'
 import "./modal.css"
@@ -7,6 +7,8 @@ import "./modal.css"
 export default function Map(props) {
 
   const [modalState, setModalState] = useState(false);
+  const [currentRestaurantData, setCurrentRestaurantData] = useState([]);
+  const markerRef = useRef(null)
 
 function handleClick (){
 
@@ -15,8 +17,12 @@ function handleClick (){
   } else {
     setModalState(true);
   }
-
 }
+
+useEffect(() => {
+  console.log(markerRef.current)
+  if (props.popUpIndex) markerRef.current.openPopup();
+}, [props.popUpIndex]);
 
   return (
     <>
@@ -33,9 +39,10 @@ function handleClick (){
       />
       {props.restaurantData.map((restaurant) => {
           return (
-            <Marker position={[restaurant.coordinates.ns, restaurant.coordinates.we]}>
+            <Marker ref={el => {markerRef.current = el }}  position={[restaurant.coordinates.ns, restaurant.coordinates.we]}>
               <Popup>
-              <button onClick={handleClick}>{restaurant.name}</button>
+              <button onClick={() => {handleClick();
+                setCurrentRestaurantData(restaurant)}}>{restaurant.name}</button>
               </Popup>
             </Marker>
             );
@@ -43,7 +50,7 @@ function handleClick (){
     </MapContainer>
     </div>
     <div id="modal">
-    <ModalComponent modalState={modalState} handleClick={handleClick} />
+    <ModalComponent modalState={modalState} handleClick={handleClick} currentRestaurantData={currentRestaurantData}/>
     </div>
     </>
   );

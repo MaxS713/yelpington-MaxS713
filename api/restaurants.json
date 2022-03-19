@@ -15,7 +15,7 @@
   {
     "id": "2",
     "name": "Pho Hong",
-    "cuisine": "Cuisine",
+    "cuisine": "Vietnamese Cuisine",
     "address": "325 N Winooski Ave, Burlington, VT 05401",
     "coordinates": {
       "ns": 44.4890,
@@ -28,7 +28,7 @@
   {
     "id": "3",
     "name": "Café Mamajuana",
-    "cuisine": "Cuisine",
+    "cuisine": "Dominican Cuisine",
     "address": "88 Oak St, Burlington, VT 05401",
     "coordinates": {
       "ns": 44.4898,
@@ -67,7 +67,7 @@
   {
   "id": "6",
   "name": "Bistro de Margot",
-  "cuisine": "French",
+  "cuisine": "French Cuisine",
   "address": "126 College St, Burlington, VT 05401",
   "coordinates": {
     "ns": 44.4772,

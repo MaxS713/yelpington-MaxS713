@@ -6,6 +6,8 @@ import restaurantLogo from "./images/restaurant-logo.png";
 
 function App() {
   const [restaurantData, setRestaurantData] = useState([]);
+  const [popUpIndex, setPopUpIndex] = useState("");
+  
 
   async function getData() {
     let restaurantsList = await fetch("http://localhost:5000/api");
@@ -28,13 +30,15 @@ function App() {
           />
           <h1>Places You Can Eat!</h1>
         </div>
-        <Map restaurantData={restaurantData} />
+        <Map restaurantData={restaurantData} popUpIndex={popUpIndex} />
       </div>
       <ol id="navbar">
         {restaurantData.map((restaurant) => {
           return (
-            <li key={restaurant.id}>
-            <a href="">{restaurant.name}</a>
+            <li key={restaurant.id}
+            onClick={e => {
+              setPopUpIndex(restaurant.id);
+            }}>{restaurant.name}
             </li>
           );
         })}

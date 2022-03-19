@@ -1,5 +1,6 @@
+
 #overlay {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   bottom: 0; /*The overlay covers the whole screen with TBLR properties of 0 and a position: fixed*/
@@ -10,25 +11,25 @@
 }
 
 #modal-background {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   outline: 5px solid #92B4DB;
+  background-color: #FAFCFA;
+  width: 75vw;
+  height: 80vh;
   }
   
   #modal-content {
-    z-index: 4;
+    z-index: 5;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50vw;
-    height: 50vw;
-    background-color: rgb(213, 230, 213,0.1);
   }
 
   #map-container{
-    z-index: 1;
+    z-index: 2;
   }

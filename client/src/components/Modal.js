@@ -7,7 +7,14 @@ export default function ModalComponent (props){
       return(
         <main id="overlay" onClick={props.handleClick}>
           <div id="modal-background">
-          <section id="modal-content">Buy my stuff!</section>
+          <div id="modal-content">
+            <h1>{props.currentRestaurantData.name}</h1>
+            <p>{props.currentRestaurantData.cuisine}</p>
+            <p>Address: {props.currentRestaurantData.address}</p>
+            <p>Phone Number: {props.currentRestaurantData.phoneNumber}</p>
+            <p>Hours: {props.currentRestaurantData.hours}</p>
+            <p>Hours: {props.currentRestaurantData.about}</p>
+            </div>
           </div>
         </main>
       )
