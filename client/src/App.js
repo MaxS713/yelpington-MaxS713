@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import Map from "./components/Map.js";
-
 import restaurantLogo from "./images/restaurant-logo.png";
 
 function App() {
   const [restaurantData, setRestaurantData] = useState([]);
   const [popUpIndex, setPopUpIndex] = useState("");
-  
+  const [hoverIndex, setHoverIndex] = useState("");
 
   async function getData() {
     let restaurantsList = await fetch("http://localhost:5000/api");
@@ -17,7 +16,6 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
-
 
   return (
     <main>
@@ -30,15 +28,24 @@ function App() {
           />
           <h1>Places You Can Eat!</h1>
         </div>
-        <Map restaurantData={restaurantData} popUpIndex={popUpIndex} />
+        <Map restaurantData={restaurantData} popUpIndex={popUpIndex} hoverIndex={hoverIndex} />
       </div>
       <ol id="navbar">
         {restaurantData.map((restaurant) => {
           return (
-            <li key={restaurant.id}
-            onClick={e => {
-              setPopUpIndex(restaurant.id);
-            }}>{restaurant.name}
+            <li
+              key={restaurant.id}
+              onClick={(e) => {
+                setPopUpIndex(restaurant.id);
+              }}
+              onMouseEnter={(e)=> {
+                setHoverIndex(restaurant.id);
+              }}
+              onMouseLeave={(e)=> {
+                setHoverIndex(false);
+              }}
+            >
+              {restaurant.name}
             </li>
           );
         })}

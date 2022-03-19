@@ -25,23 +25,11 @@
   font-weight:700;
 }
 
-#navbar a {
+#navbar li {
   color: #EDAC92;
 }
 
-#navbar a:link {
-  text-decoration: none;
-}
-
-#navbar a:visited {
-  text-decoration: none;
-}
-
-#navbar a:active {
-  text-decoration: none;
-}
-
-#navbar a:hover {
-  text-decoration: none;
+#navbar li:hover {
+  cursor:pointer;
   color: #92B4DB;
 }
