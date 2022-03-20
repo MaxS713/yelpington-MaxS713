@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inspiration");
 
+
+
 *{
   border: 1px solid red;
 }
@@ -17,6 +19,7 @@ body {
   background-color: #FAFCFA;
   font-family: 'Inspiration', cursive;
   color: #EDAC92;
+  letter-spacing: 0.30em;
 }
 
 main {

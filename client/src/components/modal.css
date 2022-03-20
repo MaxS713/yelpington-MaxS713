@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
 
 #overlay {
   z-index: 3;
@@ -7,7 +8,7 @@
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6); /*A black color with an opacitity setting creates a "dim" effect */
-  transition: opacity 500ms; 
+  transition: opacity 500ms;
 }
 
 #modal-background {
@@ -28,8 +29,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: normal;
+  }
+
+  #modal-content h1{
+    font-family: 'Inspiration', cursive;
+    font-size:3em;
+    letter-spacing: 0.2em;
   }
 
   #map-container{
     z-index: 2;
   }
+

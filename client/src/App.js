@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import Map from "./components/Map.js";
+import ModalComponent from './components/Modal.js'
 import restaurantLogo from "./images/restaurant-logo.png";
 
 function App() {
+
   const [restaurantData, setRestaurantData] = useState([]);
-  const [popUpIndex, setPopUpIndex] = useState("");
   const [hoverIndex, setHoverIndex] = useState("");
+  const [modalState, setModalState] = useState(false);
+  const [clickedRestaurantData, setClickedRestaurantData] = useState([]);
 
   async function getData() {
     let restaurantsList = await fetch("http://localhost:5000/api");
@@ -16,6 +19,15 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
+
+  function handleClick (){
+
+    if (modalState === true){
+      setModalState(false);
+    } else {
+      setModalState(true);
+    }
+  }
 
   return (
     <main>
@@ -28,15 +40,16 @@ function App() {
           />
           <h1>Places You Can Eat!</h1>
         </div>
-        <Map restaurantData={restaurantData} popUpIndex={popUpIndex} hoverIndex={hoverIndex} />
+        <Map restaurantData={restaurantData} hoverIndex={hoverIndex} />
       </div>
       <ol id="navbar">
         {restaurantData.map((restaurant) => {
           return (
             <li
               key={restaurant.id}
-              onClick={(e) => {
-                setPopUpIndex(restaurant.id);
+              onClick={() => {
+                setClickedRestaurantData(restaurant)
+                handleClick()
               }}
               onMouseEnter={(e)=> {
                 setHoverIndex(restaurant.id);
@@ -50,6 +63,7 @@ function App() {
           );
         })}
       </ol>
+      <ModalComponent modalState={modalState} handleClick={handleClick} clickedRestaurantData={clickedRestaurantData}/>
     </main>
   );
 }
