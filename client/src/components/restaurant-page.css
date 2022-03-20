@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito");
+
+#page-content {
+  outline: 5px solid #92b4db;
+  background-color: #fafcfa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: normal;
+  width: 75vw;
+  height: 80vh;
+}
+
+#page-content h1 {
+  font-family: "Inspiration", cursive;
+  font-size: 3em;
+  letter-spacing: 0.2em;
+}

@@ -1,6 +1,10 @@
-import {useState, useEffect, useRef} from 'react'
+import { useEffect, useRef } from 'react'
 import {MapContainer, TileLayer, Marker} from "react-leaflet";
+import 'leaflet-defaulticon-compatibility';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import * as L from "leaflet"
+import 'leaflet/dist/leaflet.css';
+
 
 export default function Map(props) {
 
@@ -22,7 +26,6 @@ export default function Map(props) {
     shadowSize: [41, 41]
   });
 
-  const [currentRestaurantData, setCurrentRestaurantData] = useState([]);
   const markerRef = useRef([])
 
 useEffect(() => {
