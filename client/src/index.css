@@ -1,12 +1,7 @@
+
 /* Style for the general layout of the pages */
 
 @import url("https://fonts.googleapis.com/css2?family=Inspiration");
-
-
-
-*{
-  border: 1px solid red;
-}
 
 html {
   height: 100vh;
@@ -23,13 +18,12 @@ body {
 }
 
 main {
-  min-height: 100vh;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width:80vw;
+  margin: 0 auto;
   gap:10vw;
   line-height: 1.5;
-  padding: 4em 1em;
 }
 

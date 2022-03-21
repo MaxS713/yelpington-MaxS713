@@ -7,10 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-
 let restaurantList = require('./api/restaurants.json');
-
-console.log(restaurantList)
 
 app.get('/api',function(req,res){
   res.sendFile(__dirname + '/api/restaurants.json')

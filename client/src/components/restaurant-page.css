@@ -1,20 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito");
 
+/* Style and layout for the restaurants' description page */
+
+/* Style and layout for the main content */
 #page-content {
   outline: 5px solid #92b4db;
   background-color: #fafcfa;
+  margin-top:5vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
   font-family: "Nunito", sans-serif;
   letter-spacing: normal;
-  width: 75vw;
-  height: 80vh;
+  min-height: 90vh;
+  min-width:60vw;
+  padding:0 1vw;
 }
 
 #page-content h1 {
+  text-align: center;
+  margin-top:1rem;
+  margin-bottom: 0;
   font-family: "Inspiration", cursive;
   font-size: 3em;
   letter-spacing: 0.2em;
 }
+
+#page-content span{
+  color:#92B4DB;
+}
+
+#resto-map-container{
+    height: 15rem;
+    width: 15rem;
+    outline: 5px solid #92B4DB;
+}
+
+/* Even smaller map for when the screen gets really small */
+@media screen and (max-width: 500px) {
+  #resto-map-container{
+    height:10rem;
+    width:10rem;
+  }
+}
+
+/* Style for the "Go Back" button */
+#page-content button{
+  margin: 1rem auto;
+  font-size: 1em;
+  background-color: #fafcfa;
+  color: #EDAC92;
+  border: 2px solid #EDAC92;
+  border-radius: 2px;
+}
+
+#page-content button:hover{
+  color: #92b4db;
+  border: 2px solid #92b4db;
+  cursor:pointer;
+}
+
+
+

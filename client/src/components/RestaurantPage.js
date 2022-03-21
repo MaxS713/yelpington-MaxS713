@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react'
 import RestaurantMap from "./RestaurantMap.js";
+import { useNavigate } from "react-router-dom";
 import "./restaurant-page.css";
 
+
+//The restaurant page component to display each restaurants's information
 export default function RestaurantPage() {
 
+  //setting up a state variable to store the current restaurant's data
   const [currentRestaurantData, setCurrentRestaurantData] = useState([]);
 
+  const navigate = useNavigate(); //this is used to be able to go to another url "onClick"
+
+  //this functions gets the corresponding data for each restaurant from server.js
+  //based on which id was in the URL
   async function getRestaurantData() {
     let params = new URLSearchParams(document.location.search);
     let currentRestaurantID = params.get("id")
@@ -17,24 +25,25 @@ export default function RestaurantPage() {
     getRestaurantData();
   }, []);
 
-  
+  //Displaying all the information for each restaurant
   return (
     <main>
       <div id="page-content">
         <h1>{currentRestaurantData.name}</h1>
         <p>
-          {currentRestaurantData.cuisine}
+          <center>{currentRestaurantData.cuisine}</center>
           <br />
-          Address: {currentRestaurantData.address}
+          <span> Address: </span>{currentRestaurantData.address}
           <br />
-          Phone Number: {currentRestaurantData.phoneNumber}
+          <span>Phone Number: </span>{currentRestaurantData.phoneNumber}
           <br />
-          Hours: {currentRestaurantData.hours}
+          <span>Hours: </span>{currentRestaurantData.hours}
           <br />
-          Hours: {currentRestaurantData.about}
+          <span>Description: </span>{currentRestaurantData.about}
         </p>
         <RestaurantMap currentRestaurantData={currentRestaurantData} />
-        <button>Go Back</button>
+        <button onClick={() => navigate(`/`)}>Go Back</button> 
+        {/* This onclick button returns to the index page*/}
       </div>
     </main>
   );
