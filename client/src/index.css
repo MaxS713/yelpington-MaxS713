@@ -27,3 +27,12 @@ main {
   line-height: 1.5;
 }
 
+/* The way it currently is, the markers 
+don't need to be clicked, so the pointer is set back to a default
+Also not sure why I needed it in index.css for it to actually register*/
+.marker-icon{
+  cursor:default;
+}
+.marker-resto-icon{
+  cursor:grab;
+}

@@ -29,7 +29,7 @@ export default function Map(props) {
     iconAnchor: [6, 20],
     popupAnchor: [1, -34],
     shadowSize: [20, 20],
-    className: "marker",
+    className: "marker-icon"
   });
 
   const bigIcon = new L.Icon({
@@ -39,7 +39,7 @@ export default function Map(props) {
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
     shadowSize: [41, 41],
-    className: "marker",
+    className: "marker-icon"
   });
 
   //It took some work but thanks to useEffect and useRef, when each

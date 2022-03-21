@@ -1,3 +1,4 @@
+
 /* required styles */
 .leaflet-pane,
 .leaflet-tile,
@@ -124,7 +125,7 @@
 	position: relative;
 	z-index: 800;
 	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
-	pointer-events: auto;
+	pointer-events: none;
 	}
 .leaflet-top,
 .leaflet-bottom {
@@ -206,8 +207,12 @@
 
 /* cursors */
 
+.marker-icon{
+	cursor: default;
+}
+
 .leaflet-interactive {
-	cursor: pointer;
+	cursor: default;
 	}
 .leaflet-grab {
 	cursor: -webkit-grab;
@@ -220,7 +225,7 @@
 	}
 .leaflet-popup-pane,
 .leaflet-control {
-	cursor: auto;
+	cursor: default;
 	}
 .leaflet-dragging .leaflet-grab,
 .leaflet-dragging .leaflet-grab .leaflet-interactive,
@@ -245,7 +250,7 @@
 .leaflet-pane > svg path.leaflet-interactive,
 svg.leaflet-image-layer.leaflet-interactive path {
 	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
-	pointer-events: auto;
+	pointer-events: none;
 	}
 
 /* visual tweaks */
@@ -582,8 +587,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 	}
 .leaflet-tooltip.leaflet-clickable {
-	cursor: pointer;
-	pointer-events: auto;
+	cursor: default;
+	pointer-events: none;
 	}
 .leaflet-tooltip-top:before,
 .leaflet-tooltip-bottom:before,

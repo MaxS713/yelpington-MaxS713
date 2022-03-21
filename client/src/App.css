@@ -32,6 +32,7 @@ This is so that logo has a color that matches the website*/
   height: 30rem;
   width: 30rem;
   outline: 5px solid #92B4DB;
+  cursor: default;
 }
 
 /* The map was better with a fixed size so it doesn't 
@@ -73,8 +74,3 @@ Here's a couple media queries to adapt it to phones*/
   color: #92B4DB;
 }
 
-/* The way it currently is, the markers 
-don't need to be clicked, so the pointer is set back to default*/
-.marker{
-  cursor:default;
-}
