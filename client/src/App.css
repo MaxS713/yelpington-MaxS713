@@ -8,6 +8,7 @@
   align-items: center;
   gap:2vh;
   margin-top:0;
+  width:50vw;
 }
 
 #title-and-map h1{
@@ -19,6 +20,12 @@
   display:flex;
   justify-content: center;
   align-items:center;
+}
+
+/* I found a website that calculates values that change a png image to a specific color
+This is so that logo has a color that matches the website*/
+#title-and-logo img{ 
+  filter: invert(77%) sepia(8%) saturate(1849%) hue-rotate(177deg) brightness(96%) contrast(79%);
 }
 
 #map-container{
@@ -45,12 +52,6 @@ Here's a couple media queries to adapt it to phones*/
   main{
     flex-direction: column;
   }
-}
-
-/* I found a website that calculates values that change a png image to a specific color
-This is so that logo has a color that matches the website*/
-#title-and-logo img{ 
-  filter: invert(77%) sepia(8%) saturate(1849%) hue-rotate(177deg) brightness(96%) contrast(79%);
 }
 
 /* Style for navbar - the list of restaurants */

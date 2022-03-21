@@ -1,25 +1,32 @@
+
+//boiler plate to use express and open a port
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 5000;
-const cors = require("cors");
+const cors = require("cors"); 
+// not sure if cors was actually needed in this scenario, but added it for good measure
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+//gets the json data and stores it in a variable
 let restaurantList = require('./api/restaurants.json');
 
+//sends the whole data if this url is visited
 app.get('/api',function(req,res){
-  res.sendFile(__dirname + '/api/restaurants.json')
+  res.send(restaurantList)
 })
 
+//sends only the corresponding part of the JSON data 
+//if a restaurant by id is demanded
 app.get('/restaurant/:id',function(req,res){
   let id = parseInt(req.params.id) - 1;
   let restaurantDataToSend = restaurantList[id]
-  console.log(restaurantDataToSend)
   res.send(restaurantDataToSend)
 })
 
+//I'm listening...
 app.listen(port, () => {
   console.log("Now listening on http://localhost:" + port);
 });

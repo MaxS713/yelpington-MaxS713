@@ -18,7 +18,7 @@ function App() {
   const navigate = useNavigate(); 
   
 
-//This functions gets the JSON data sent by server.js 
+//This functions gets the JSON data sent by server.js for all restaurants
   async function getData() {
     let restaurantsList = await fetch("http://localhost:5000/api");
     restaurantsList = await restaurantsList.json();
