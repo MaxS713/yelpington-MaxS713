@@ -44,7 +44,6 @@ export default function RestaurantMap(props) {
           scrollWheelZoom={false}
           zoomControl={true}
           attributionControl={false}
-          draggin={false}
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'

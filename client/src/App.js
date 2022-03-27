@@ -12,7 +12,7 @@ function App() {
 
   //this state is to know if a link is being hovered on so that
   //the corresponding marker size can change
-  const [hoverIndex, setHoverIndex] = useState(""); 
+  const [hoverIndex, setHoverIndex] = useState(false); 
 
   //I've read online that this can be used to go to a link on a onClick event...
   const navigate = useNavigate(); 
@@ -41,13 +41,13 @@ function App() {
           />
           <h1>Places You Can Eat!</h1>
         </div>
-        {/* The map with the two states passed the restaurant data + which item in the list is being hovered on */}
+        {/* The map with the two states passed: the restaurant data + which item in the list is being hovered on */}
         <HomePageMap restaurantData={restaurantData} hoverIndex={hoverIndex} />
       </div>
 
       {/*The list of restaurants*/}
       <ol id="navbar">
-        {/*Thanks to .map - every item in the JSON data received gets a li element*/}
+        {/*Thanks to .map - every item in the JSON data received gets a <li> element*/}
         {restaurantData.map((restaurant) => {
           return (
             <li

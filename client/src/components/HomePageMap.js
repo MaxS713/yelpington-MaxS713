@@ -58,7 +58,7 @@ export default function Map(props) {
         center={[44.48, -73.21]} //hard-centered on Burlington, VT
         zoom={14.25}
         //I had to remove most zoom settings because they were not necessarily needed + 
-        //the map would too often accidentaly move when trying to scroll around the page 
+        //the map would too often accidentally move when trying to scroll around the page 
         doubleClickZoom={false}
         trackResize={true}
         scrollWheelZoom={false}
