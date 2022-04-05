@@ -20,7 +20,7 @@ function App() {
 
 //This functions gets the JSON data sent by server.js for all restaurants
   async function getData() {
-    let restaurantsList = await fetch("http://localhost:5000/api");
+    let restaurantsList = await fetch("api/get-all-restaurants");
     restaurantsList = await restaurantsList.json();
     setRestaurantData(restaurantsList);
   }
