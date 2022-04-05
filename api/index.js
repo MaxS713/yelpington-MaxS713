@@ -20,7 +20,7 @@ app.get('/api',function(req,res){
 
 //sends only the corresponding part of the JSON data 
 //if a restaurant by id is demanded
-app.get('/restaurant/:id',function(req,res){
+app.get('api/restaurant/:id',function(req,res){
   let id = parseInt(req.params.id) - 1;
   let restaurantDataToSend = restaurantList[id]
   res.send(restaurantDataToSend)

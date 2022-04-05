@@ -17,7 +17,7 @@ export default function RestaurantPage() {
   async function getRestaurantData() {
     let params = new URLSearchParams(document.location.search);
     let currentRestaurantID = params.get("id")
-    let restaurantData = await fetch(`http://localhost:5000/restaurant/${currentRestaurantID}`);
+    let restaurantData = await fetch(`http://localhost:5000/api/restaurant/${currentRestaurantID}`);
     restaurantData = await restaurantData.json();
     setCurrentRestaurantData(restaurantData);
   }
