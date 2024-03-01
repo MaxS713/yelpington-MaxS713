@@ -9,7 +9,7 @@
       "we": -73.2019
     },
     "phoneNumber": "+1 (802) 448-3032",
-    "hours": "12PM–8PM",
+    "hours": "12PM-8PM",
     "about": "Down-to-earth restaurant serving eclectic and delicious Somali dishes & drinks."
   },
   {
@@ -35,7 +35,7 @@
       "we": -73.2100
     },
     "phoneNumber": "+1 (802) 316 8128",
-    "hours": "4PM–9PM",
+    "hours": "4PM-9PM",
     "about": "Dominican restaurant with plenty of original and tasty options."
   },
   {
@@ -48,12 +48,12 @@
       "we": -73.2195
     },
     "phoneNumber": "+ 1 (802) 540-0188",
-    "hours": "8AM–3PM",
+    "hours": "8AM-3PM",
     "about": "Local chain featuring crepes."
   },
   {
     "id": "5",
-    "name": "Vivid Coffee Roasters",
+    "name": "Vivid Coffee",
     "cuisine": "Coffee",
     "address": "150 Cherry St, Burlington, VT 05401",
     "coordinates": {
@@ -61,7 +61,7 @@
       "we": -73.2121
     },
     "phoneNumber": "+ 1 (802) 383-1088",
-    "hours": "7AM–4PM",
+    "hours": "7AM-4PM",
     "about": "Get your coffee here. Quality and meticulous roasts imported from small farms."
   },
   {
@@ -74,7 +74,7 @@
     "we": -73.2148
   },
   "phoneNumber": "+1 (802) 863-5200",
-  "hours": "5PM–8PM",
+  "hours": "5PM-8PM",
   "about": "Stylish restaurant offering modern takes on classic French cuisine. Reservation required."
   }
 ]
